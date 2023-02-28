@@ -10,7 +10,7 @@ module Jekyll
     #
     module Helper
       def post_selector(registers)
-        registers[:site].config["disqus"]["post_selector"] || "include.post"
+        registers[:site].config["jekyll_disqus"]["post_selector"] || "include.post"
       end
 
       def page_disqus_id(registers)
@@ -18,7 +18,7 @@ module Jekyll
         id = DateTime.parse(registers[:page]["date"].to_s).to_time.to_i if id.nil?
         raise MissingDisqusId, registers[:page]["url"] if id.nil?
 
-        registers[:site].config["disqus"]["id_prefix"].to_s + id.to_s
+        registers[:site].config["jekyll_disqus"]["id_prefix"].to_s + id.to_s
       end
 
       def post_disqus_id(context)
@@ -29,7 +29,7 @@ module Jekyll
         id = DateTime.parse(context["#{selector}.date"].to_s).to_time.to_i if id.nil?
         raise MissingDisqusId, registers[:page]["url"] if id.nil?
 
-        context.registers[:site].config["disqus"]["id_prefix"].to_s + id.to_s
+        context.registers[:site].config["jekyll_disqus"]["id_prefix"].to_s + id.to_s
       end
     end
   end
