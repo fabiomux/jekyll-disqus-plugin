@@ -22,3 +22,9 @@ Naming/FileName:
 
 Metrics/MethodLength:
   Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Lint/DuplicateBranch:
+  Enabled: false
