@@ -50,7 +50,7 @@ module Jekyll
         "<script
           id=\"dsq-count-scr\"
           src=\"//#{context.registers[:site].config["jekyll_disqus"]["shortname"]}.disqus.com/count.js\"
-          async></script>"
+          async></script>".gsub(/\n/, " ").gsub(/ +/, " ")
       end
     end
 
