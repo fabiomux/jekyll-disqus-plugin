@@ -16,7 +16,7 @@ module Jekyll
     #
     class MissingShortname < StandardError
       def initialize
-        super "The required param 'shortname' is missing!"
+        super "The required Disqus param 'shortname' is missing!"
       end
     end
 
@@ -26,7 +26,7 @@ module Jekyll
     class DuplicatedDisqusId < StandardError
       def initialize(args)
         super "The page at the URL: #{args[:current_url]}
-          has same ID of the page at: #{args[duplicated_url]} (#{args[id]})!"
+          has the same Disqus ID of: #{args[duplicated_url]} (#{args[id]})!"
       end
     end
   end
