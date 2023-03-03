@@ -3,6 +3,15 @@
 module Jekyll
   module Disqus
     #
+    # Invalid date format.
+    #
+    class InvalidDate < StandardError
+      def initialize(url)
+        super "The page at the URL: #{url} doesn't contains a valid 'date' field!"
+      end
+    end
+
+    #
     # Missing Disqus ID field error.
     #
     class MissingDisqusId < StandardError
