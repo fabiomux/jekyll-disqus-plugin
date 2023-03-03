@@ -29,7 +29,7 @@ $ bundle install
 
 Inside the `_config.yml` file can set up the following fields:
 ```yaml
-jekyll_disqus:
+jekyll-disqus:
   shortname:
   id_prefix: 
   post_selector: 'include.post'

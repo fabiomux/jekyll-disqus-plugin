@@ -49,7 +49,7 @@ module Jekyll
       def render(context)
         "<script
           id=\"dsq-count-scr\"
-          src=\"//#{context.registers[:site].config["jekyll_disqus"]["shortname"]}.disqus.com/count.js\"
+          src=\"//#{context.registers[:site].config["jekyll-disqus"]["shortname"]}.disqus.com/count.js\"
           async></script>".gsub(/\n/, " ").gsub(/ +/, " ")
       end
     end
@@ -68,7 +68,7 @@ module Jekyll
       end
 
       def render(context)
-        raise MissingShortname unless context.registers[:site].config["jekyll_disqus"]["shortname"]
+        raise MissingShortname unless context.registers[:site].config["jekyll-disqus"]["shortname"]
 
         id = page_disqus_id(context.registers)
         url = context.registers[:page]["url"]
@@ -79,7 +79,7 @@ module Jekyll
         @@ids[id] = url
         js_string(base_url: context.registers[:site].config["url"],
                   page_url: url,
-                  disqus_shortname: context.registers[:site].config["jekyll_disqus"]["shortname"],
+                  disqus_shortname: context.registers[:site].config["jekyll-disqus"]["shortname"],
                   disqus_id: id)
       end
 

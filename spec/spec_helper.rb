@@ -8,7 +8,7 @@ def init_mock(disqus_id = nil)
   config = double("config")
   allow(config).to receive(:config) do
     {
-      "jekyll_disqus" => {
+      "jekyll-disqus" => {
         "shortname" => "shortnametest",
         "id_prefix" => "TP-"
       }
