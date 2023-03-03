@@ -6,6 +6,8 @@ module Jekyll
     # Anchor tag where rendering the comment box.
     #
     class UI < Liquid::Tag
+      include Helper
+
       def initialize(tag_name, text, tokens)
         super
         @text = text
