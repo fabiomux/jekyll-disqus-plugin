@@ -10,7 +10,17 @@ def init_mock(disqus_id = nil)
     {
       "jekyll-disqus" => {
         "shortname" => "shortnametest",
-        "id_prefix" => "TP-"
+        "id_prefix" => "TP-",
+        "ui" => {
+          "layouts" => [
+            "post"
+          ]
+        },
+        "counter" => {
+          "layouts" => [
+            "all"
+          ]
+        }
       }
     }
   end
@@ -19,7 +29,8 @@ def init_mock(disqus_id = nil)
     {
       site: config,
       page: {
-        "disqus_id" => disqus_id
+        "disqus_id" => disqus_id,
+        "layout" => "post"
       }
     }
   end

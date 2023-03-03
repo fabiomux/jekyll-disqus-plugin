@@ -33,6 +33,12 @@ jekyll-disqus:
   shortname:
   id_prefix: 
   post_selector: 'include.post'
+  ui:
+    layouts:
+    - 'post'
+  counter:
+    layouts:
+    - 'all'
 ```
 
 *shortname*
@@ -43,6 +49,12 @@ jekyll-disqus:
 
 *post_selector*
 : This is how the script will read the post data inside a paginator layout.
+
+*ui.layouts*/*counter.layouts*
+: A list of layouts where the two couple of tags will be printed.
+
+To disable the tags for specific pages or posts, the *no_disqus* field can be set up to true on the front
+matter of the specific post or page itself.
 
 By default, this addon associates a unique *ID* to each *post* using the related publishing date, but
 where needed, a *disqus_id* field can be declared in the front matter of the page. 
@@ -67,12 +79,12 @@ There is a deep relationship between the *disqus_id* and the related post, so be
 
 Below are the provided tags:
 
-|            Tag              |                      Description                    | Scope |
-|:---------------------------:|-----------------------------------------------------|:-----:|
-| {% disqus_counter %}        |The count of comments for a certain post             | Post  |
-| {% disqus_script_counter %} |The required Javascript that renders the counter     | Page  |
-| {% disqus_ui %}             |The comment box                                      | Post  |
-| {% disqus_script_ui %}      |The required Javascript that renders the comment box | Page  |
+|            Tag              |                      Description                    | Template |
+|:---------------------------:|-----------------------------------------------------|:--------:|
+| {% disqus_counter %}        |The count of comments for a certain post             |   Post   |
+| {% disqus_script_counter %} |The required Javascript that renders the counter     |  Default |
+| {% disqus_ui %}             |The comment box                                      |   Post   |
+| {% disqus_script_ui %}      |The required Javascript that renders the comment box |  Default |
 
 The *script* tags must be included once for page and, providing a Javascript code, their position should
 be in the bottom part of the main layout, just before the end of the *body* HTML tag.

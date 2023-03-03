@@ -3,7 +3,7 @@
 module Jekyll
   module Disqus
     #
-    # Renders the comment box.
+    # Anchor tag where rendering the comment box.
     #
     class UI < Liquid::Tag
       def initialize(tag_name, text, tokens)
@@ -11,13 +11,15 @@ module Jekyll
         @text = text
       end
 
-      def render(_context)
+      def render(context)
+        return "" if disabled_tag?("ui", context)
+
         "<div id=\"disqus_thread\"></div>"
       end
     end
 
     #
-    # Display the comment counter for a specific post or page.
+    # Anchor tag where rendering the comment counter.
     #
     class Counter < Liquid::Tag
       include Helper
@@ -29,6 +31,8 @@ module Jekyll
       end
 
       def render(context)
+        return "" if disabled_tag?("counter", context)
+
         id = post_disqus_id(context)
         id = page_disqus_id(context.registers) if id.nil?
         return "" if id.nil?
@@ -38,15 +42,19 @@ module Jekyll
     end
 
     #
-    # Print the Javascript code to load for the counter.
+    # Print the Javascript code to render the counter.
     #
     class ScriptCounter < Liquid::Tag
+      include Helper
+
       def initialize(tag_name, text, tokens)
         super
         @text = text
       end
 
       def render(context)
+        return "" if disabled_tag?("counter", context)
+
         "<script
           id=\"dsq-count-scr\"
           src=\"//#{context.registers[:site].config["jekyll-disqus"]["shortname"]}.disqus.com/count.js\"
@@ -55,7 +63,7 @@ module Jekyll
     end
 
     #
-    # Print the global Javascript code required by Disqus.
+    # Print the Javascript code to render the comment box.
     #
     class ScriptUI < Liquid::Tag
       include Helper
@@ -68,6 +76,8 @@ module Jekyll
       end
 
       def render(context)
+        return "" if disabled_tag?("ui", context)
+
         raise MissingShortname unless context.registers[:site].config["jekyll-disqus"]["shortname"]
 
         id = page_disqus_id(context.registers)

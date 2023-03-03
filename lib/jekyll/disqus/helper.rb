@@ -9,6 +9,16 @@ module Jekyll
     # a post or a page.
     #
     module Helper
+      def disabled_tag?(tag, context)
+        return true if context.registers[:page]["no_disqus"]
+        return false if context.registers[:site].config["jekyll-disqus"][tag]["layouts"].include?("all")
+
+        layout = context.registers[:page]["layout"]
+        return false if context.registers[:site].config["jekyll-disqus"][tag]["layouts"].include?(layout)
+
+        true
+      end
+
       def post_selector(registers)
         registers[:site].config["jekyll-disqus"]["post_selector"] || "include.post"
       end
