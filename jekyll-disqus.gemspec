@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/fabiomux/jekyll-disqus"
   spec.metadata["changelog_uri"] = "https://freeaptitude.altervista.org/projects/jekyll-disqus.html#changelog"
+  spec.metadata["wiki_uri"] = "https://github.com/fabiomux/jekyll-disqus/wiki"
   spec.metadata["rubygems_mfa_required"] = "true"
 
   # Specify which files should be added to the gem when it is released.
