@@ -11,6 +11,7 @@ mandatory for those pages that don't contain a publishing date but recall one of
 their layouts.
 
 [![Ruby](https://github.com/fabiomux/jekyll-disqus-plugin/actions/workflows/main.yml/badge.svg)][wf_main]
+[![Gem Version](https://badge.fury.io/rb/jekyll-disqus-plugin.svg)][gem_version]
 
 ## Installation
 
@@ -111,3 +112,4 @@ file.
 [project_page]: https://freeaptitude.altervista.org/projects/jekyll-disqus.html "Project page on the Freeaptitude blog"
 [jekyll_disqus_wiki]: https://github.com/fabiomux/jekyll-disqus-plugin/wiki "Jekyll-Disqus wiki page on GitHub"
 [wf_main]: https://github.com/fabiomux/jekyll-disqus-plugin/actions/workflows/main.yml
+[gem_version]: https://badge.fury.io/rb/jekyll-disqus-plugin
