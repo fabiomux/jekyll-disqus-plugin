@@ -3,7 +3,7 @@
 require_relative "lib/jekyll/disqus/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "jekyll-disqus"
+  spec.name = "jekyll-disqus-plugin"
   spec.version = Jekyll::Disqus::VERSION
   spec.authors = ["Fabio Mucciante"]
   spec.email = ["fabio.mucciante@gmail.com"]
@@ -17,9 +17,9 @@ Gem::Specification.new do |spec|
   # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/fabiomux/jekyll-disqus"
+  spec.metadata["source_code_uri"] = "https://github.com/fabiomux/jekyll-disqus-plugin"
   spec.metadata["changelog_uri"] = "https://freeaptitude.altervista.org/projects/jekyll-disqus.html#changelog"
-  spec.metadata["wiki_uri"] = "https://github.com/fabiomux/jekyll-disqus/wiki"
+  spec.metadata["wiki_uri"] = "https://github.com/fabiomux/jekyll-disqus-plugin/wiki"
   spec.metadata["rubygems_mfa_required"] = "true"
 
   # Specify which files should be added to the gem when it is released.

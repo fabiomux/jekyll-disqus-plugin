@@ -16,7 +16,7 @@ Inside the Gemfile add the gem name in the `:jekyll_plugins` group:
 ```ruby
 group :jekyll_plugins do
   ...
-  gem 'jekyll-disqus'
+  gem 'jekyll-disqus-plugin'
 end
 ```
 
@@ -107,4 +107,4 @@ file.
 - the [Jekyll-Disqus Github wiki][jekyll_disqus_wiki].
 
 [project_page]: https://freeaptitude.altervista.org/projects/jekyll-disqus.html "Project page on the Freeaptitude blog"
-[jekyll_disqus_wiki]: https://github.com/fabiomux/jekyll-disqus/wiki "Jekyll-Disqus wiki page on GitHub"
+[jekyll_disqus_wiki]: https://github.com/fabiomux/jekyll-disqus-plugin/wiki "Jekyll-Disqus wiki page on GitHub"

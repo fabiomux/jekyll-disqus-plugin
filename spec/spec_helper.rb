@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "liquid"
-require "jekyll-disqus"
+require "jekyll-disqus-plugin"
 
 def init_mock(disqus_id = nil)
   @context = Liquid::ParseContext.new
