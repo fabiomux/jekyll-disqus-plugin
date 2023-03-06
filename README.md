@@ -10,6 +10,8 @@ Although the *ID* can be automatically generated is still possible to declare a 
 mandatory for those pages that don't contain a publishing date but recall one of the Disqus tags in 
 their layouts.
 
+[![Ruby][wf_main_badge]][wf_main]
+
 ## Installation
 
 Inside the Gemfile add the gem name in the `:jekyll_plugins` group:
@@ -108,3 +110,5 @@ file.
 
 [project_page]: https://freeaptitude.altervista.org/projects/jekyll-disqus.html "Project page on the Freeaptitude blog"
 [jekyll_disqus_wiki]: https://github.com/fabiomux/jekyll-disqus-plugin/wiki "Jekyll-Disqus wiki page on GitHub"
+[wf_badge]: https://github.com/fabiomux/jekyll-disqus-plugin/actions/workflows/main.yml/badge.svg
+[wf_main]: https://github.com/fabiomux/jekyll-disqus-plugin/actions/workflows/main.yml
