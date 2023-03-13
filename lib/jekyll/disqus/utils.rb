@@ -35,7 +35,7 @@ module Jekyll
     class DuplicatedDisqusId < StandardError
       def initialize(args)
         super "The page at the URL: #{args[:current_url]}
-          has the same Disqus ID of: #{args[duplicated_url]} (#{args[id]})!"
+          has the same Disqus ID of: #{args[:duplicated_url]} (#{args[:id]})!"
       end
     end
   end
