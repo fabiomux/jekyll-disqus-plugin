@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-disqus-plugin (1.0.0)
+    jekyll-disqus-plugin (1.0.1)
       jekyll (>= 3.7, < 5.0)
 
 GEM
