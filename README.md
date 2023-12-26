@@ -15,18 +15,28 @@ their layouts.
 
 ## Installation
 
-Inside the Gemfile add the gem name in the `:jekyll_plugins` group:
-```ruby
-group :jekyll_plugins do
-  ...
-  gem 'jekyll-disqus-plugin'
-end
-```
+Can install the gem either manually or using *Bundler*.
 
-Then run from the terminal:
-```shell
-$ bundle install
-```
+### Using Bundler
+
+Install the gem and add to the application's Gemfile by executing:
+
+    $ bundle add jekyll-disqus-plugin --group jekyll_plugins
+
+### Manually
+
+If bundler is not being used to manage dependencies, install the gem by executing:
+
+    $ gem install jekyll-disqus-plugin
+
+Then, add the following code within the Gemfile of your Jekyll project:
+
+    ```ruby
+    group :jekyll_plugins do
+      ...
+      gem 'jekyll-disqus-plugin'
+    end
+    ```
 
 ## Configuration
 
