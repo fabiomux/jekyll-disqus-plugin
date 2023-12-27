@@ -116,6 +116,7 @@ file.
 
 ## More Help
 
+More info is available at:
 - the [project page on the Freeaptitude blog][project_page];
 - the [Jekyll-Disqus Github wiki][jekyll_disqus_wiki].
 
